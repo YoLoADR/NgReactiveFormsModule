@@ -1,0 +1,8 @@
+<form (ngSubmit)="onMovieSubmit()" [formGroup]="formGroupMovie">
+  <input formControlName="movieTitle" type="text" placeholder="titre de la serie">
+  <input formControlName="movieDirector" type="text" placeholder="Réalisateur de la serie">
+  <button type="submit" *ngIf="inputIsValid()">ajouter</button>
+</form>
+
+{{formGroupMovie.value | json}}
+{{formGroupMovie.status}}
